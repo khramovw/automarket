@@ -615,7 +615,7 @@ button, input {
 .mobile-nav {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  width: 80%;
+  width: 40em;
   top: 0;
   bottom: 0;
   left: -100%;
