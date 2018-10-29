@@ -262,8 +262,35 @@ button, input {
   .main-navigation .nav-row + .nav-row {
     margin-top: 2.4em; }
 
+.nav-item.active a {
+  color: #ff423d !important; }
+
 /* default classes*/
 /* defolt classes */
+.home.tires {
+  background: url("../img/bg-3.jpg") no-repeat center/cover; }
+
+.home.agricultural {
+  background: url("../img/bg-4.jpg") no-repeat center/cover; }
+
+.home.belts {
+  background: url("../img/bg-5.jpg") no-repeat center/cover; }
+
+.home.bearings {
+  background: url("../img/bg-6.jpg") no-repeat center/cover; }
+
+.home.oils {
+  background: url("../img/bg-7.jpg") no-repeat center/cover; }
+
+.home.cars {
+  background: url("../img/bg-8.jpg") no-repeat center/cover; }
+
+.home.freight {
+  background: url("../img/bg-9.jpg") no-repeat center/cover; }
+
+.home.batary {
+  background: url("../img/bg-1.jpg") no-repeat center/cover; }
+
 .container {
   max-width: 71.88em;
   padding: 0 1em;
@@ -386,7 +413,8 @@ button, input {
 
 /* Home start */
 .home {
-  background: url("../img/bg-2.jpg") no-repeat center/cover; }
+  background: url("../img/bg-2.jpg") no-repeat center/cover;
+  font-size: .705em; }
   .home .header-top {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -420,7 +448,7 @@ button, input {
     font-weight: bold;
     letter-spacing: .1em; }
     .home .phones .number-phone-wrap a {
-      font-size: .875em; }
+      font-size: 1.4em; }
   .home .header-bottom-wrap {
     background-color: #a61814;
     opacity: 1; }
