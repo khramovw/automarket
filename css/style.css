@@ -415,6 +415,9 @@ button, input {
 .home {
   background: url("../img/bg-2.jpg") no-repeat center/cover;
   font-size: .705em; }
+  @media screen and (max-width: 1024px) {
+    .home {
+      font-size: initial; } }
   .home .header-top {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
