@@ -200,3 +200,124 @@ var Modal = function () {
 }();
 
 var modal = new Modal();
+
+// Переключение dropdown
+
+var Dropdown = function () {
+    function Dropdown() {
+        _classCallCheck(this, Dropdown);
+
+        this.dropdowns = document.querySelectorAll('.dropdown-container');
+        this.arrInitialData = [];
+        this.init();
+        this.arrResult = ['', '', '', ''];
+    }
+
+    _createClass(Dropdown, [{
+        key: 'init',
+        value: function init() {
+            this.events();
+        }
+    }, {
+        key: 'events',
+        value: function events() {
+            var _this6 = this;
+
+            this.dropdowns.forEach(function (dropdown) {
+                return _this6.arrInitialData.push(dropdown.innerText);
+            });
+            this.dropdowns.forEach(function (dropdown, index) {
+                return dropdown.addEventListener('click', function (e) {
+                    return _this6.switchDropdowns(e, dropdown, index);
+                });
+            });
+        }
+    }, {
+        key: 'switchDropdowns',
+        value: function switchDropdowns(e, dropdown, index) {
+            // console.log(e.target);
+            if (e.target.tagName == 'LI') {
+                dropdown.querySelector('.title').innerText = e.target.innerText;
+                dropdown.classList.add('dropdown-active');
+                // console.log(index);
+
+                this.reset(index);
+            }
+
+            this.resultSearch(index);
+
+            if (e.target.tagName !== 'INPUT') {
+                var marker = 0;
+                if (dropdown.classList.contains('is-selected')) marker = 1;
+                this.dropdowns.forEach(function (dropdown) {
+                    return dropdown.classList.remove("is-selected");
+                });
+
+                if (marker == 1) dropdown.classList.remove('is-selected');else dropdown.classList.add('is-selected');
+            }
+        }
+    }, {
+        key: 'resultSearch',
+        value: function resultSearch(index) {
+            var _this7 = this;
+
+            this.dropdowns.forEach(function (el, i) {
+                if (i == index) {
+                    _this7.arrResult.splice(index, 1, el.children[0].innerText);
+                }
+            });
+            // console.log(this.arrResult);
+        }
+    }, {
+        key: 'reset',
+        value: function reset(index) {
+            var _this8 = this;
+
+            this.dropdowns.forEach(function (dropdown, i) {
+                if (index >= i) return;else {
+                    dropdown.classList.remove("dropdown-active");
+                    _this8.dropdowns.forEach(function (dropdown, i) {
+                        if (index >= i) return;else {
+                            dropdown.querySelector('.title').innerText = _this8.arrInitialData[i];
+                        }
+                    });
+                }
+            });
+        }
+    }]);
+
+    return Dropdown;
+}();
+
+var dropdown = new Dropdown();
+
+var Accordion = function () {
+    function Accordion() {
+        _classCallCheck(this, Accordion);
+
+        this.header = document.querySelector('.table-car .header');
+        this.content = document.querySelector('.table-car .content');
+        this.init();
+    }
+
+    _createClass(Accordion, [{
+        key: 'init',
+        value: function init() {
+            this.events();
+        }
+    }, {
+        key: 'events',
+        value: function events() {
+            var _this9 = this;
+
+            this.header.addEventListener('click', function (e) {
+                _this9.header.classList.toggle('is-closed');
+                _this9.content.classList.toggle('show');
+            });
+        }
+    }]);
+
+    return Accordion;
+}();
+
+var accord = new Accordion();

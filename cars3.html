@@ -11,15 +11,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!--Custom style-->
     <link rel="stylesheet" href="css/style.css">
-    <!--Style-->
-    <style type="text/css">
-        li{margin-top: 1em;}
-        .preview-a{font-size: 16px;}
-        .preview-a:hover{color:blue}
-    </style>
 </head>
 <body>
-<section class="home private-room">
+<section class="home">
     <!--HEADER START-->
     <header class="home-header">
         <div class="desctop-wrap lg-d-none">
@@ -44,11 +38,11 @@
             <div class="header-bottom-wrap">
                 <div class="header-bottom container d-flex justify-between">
                     <ul class="header-nav d-flex align-items-center">
-                        <li><a href="#">Автокаталог</a></li>
+                        <li class="is-active"><a href="#">Автокаталог</a></li>
                         <li><a href="#">Оплата и доставка</a></li>
                         <li><a href="#">Контакты</a></li>
                         <li><a href="#">Акции</a></li>
-                        <li class="is-active"><a href="#">Личный кабинет</a></li>
+                        <li><a href="#">Личный кабинет</a></li>
                     </ul>
                     <div class="basket p-relative">
                         <a href="">
@@ -168,25 +162,134 @@
         <!--/mobile-wrap-->
     </header>
     <!--HEADER END-->
-    <section class="container">
-        <ul style="text-align: center; margin-top: 3em;">
-            <li><a href="home.html" target="_blank" class="preview-a">home.html</a></li>
-            <li><a href="home-login.html" target="_blank" class="preview-a">home-login.html</a></li>
-            <li><a href="home-registr.html" target="_blank" class="preview-a">home-registr.html</a></li>
-            <li><a href="tires.html" target="_blank" class="preview-a">tires.html</a></li>
-            <li><a href="tires-modal.html" target="_blank" class="preview-a">tires-modal.html</a></li>
-            <li><a href="oils.html" target="_blank" class="preview-a">oils.html</a></li>
-            <li><a href="oils-modal.html" target="_blank" class="preview-a">oils-modal.html</a></li>
-            <li><a href="battery.html" target="_blank" class="preview-a">battery.html</a></li>
-            <li><a href="battery-modal.html" target="_blank" class="preview-a">battery-modal.html</a></li>
-            <li><a href="bearings.html" target="_blank" class="preview-a">bearings.html</a></li>
-            <li><a href="bearings-modal.html" target="_blank" class="preview-a">bearings-modal.html</a></li>
-            <li><a href="belts.html" target="_blank" class="preview-a">belts.html</a></li>
-            <li><a href="belts-modal.html" target="_blank" class="preview-a">belts-modal.html</a></li>
-            <li><a href="private.html" target="_blank" class="preview-a">private.html</a></li>
-            <li><a href="private-modal.html" target="_blank" class="preview-a">private-modal.html</a></li>
-            <li><a href="" target="_blank"></a></li>
+    <section class="main container">
+
+        <!--breadcrumb start-->
+        <ul class="breadcrumb d-flex">
+            <li>
+                <a href="home.html">
+                    <i class="icon-home"></i>
+                    <span>Главная</span>
+                </a>
+            </li>
+            <li class="is-active">
+                <i class="icon-sedan-car-front"></i>
+                <span>Легковые автомобили</span>
+            </li>
         </ul>
+        <!--breadcrumb end-->
+        <ul class="over-nav d-flex justify-between lg-search">
+            <li class="is-active">
+                <button>VIN</button>
+            </li>
+            <li>
+                <button>OE</button>
+            </li>
+            <li>
+                <button>Наименование</button>
+            </li>
+            <li>
+                <button>Карточка</button>
+            </li>
+            <li>
+                <button>Каталожный номер</button>
+            </li>
+        </ul>
+        <!--/over-nav-->
+
+        <div class="form-search-wrap form-placeholder">
+            <input type="text" class="form-search" placeholder="VIN, OE, наименование, карточка, каталожный номер">
+            <button type="submit" class="btn lg-btn">Найти
+                <i class="icon-magnifying-glass lg-search"></i>
+            </button>
+            <button type="submit" class="btn lg-btn mobile">
+                <i class="icon-magnifying-glass lg-search"></i>
+            </button>
+        </div>
+        <!--/form-search-wrap-->
+
+        <!--NAV DROPDOWN START-->
+        <ul class="dropdown-nav d-flex">
+            <li class="dropdown-container">
+                <div class="title">Подбор по авто</div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li>Иномарки</li>
+                        <li>Автомобили снг</li>
+                    </ul>
+                </div>
+                <!-- /.dropdown-menu -->
+            </li>
+            <li class="dropdown-container">
+                <div class="title">Марка</div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown-input"><input type="text" placeholder="Поиск..."></li>
+                        <li>Acura</li>
+                        <li>Alfa romeo</li>
+                        <li>Aston martin</li>
+                        <li>Audi</li>
+                        <li>Bentley</li>
+                        <li>Brilliance</li>
+                        <li>Buick</li>
+                        <li>Byd</li>
+                        <li>Cadillac</li>
+                        <li>Chery</li>
+                        <li>Chevrolet</li>
+                        <li>Chrysler</li>
+                    </ul>
+                </div>
+                <!-- /.dropdown-menu -->
+            </li>
+            <li class="dropdown-container">
+                <div class="title">Модель</div>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown-input"><input type="text" placeholder="Поиск..."></li>
+                        <li>Cygnet</li>
+                        <li>DB6 кабрио</li>
+                        <li>DB6 купе</li>
+                        <li>DB7 кабрио</li>
+                        <li>DB7 купе</li>
+                    </ul>
+                </div>
+                <!-- /.dropdown-menu -->
+            </li>
+            <li class="dropdown-container">
+                <div class="title">Узел</div>
+            </li>
+        </ul>
+        <!--NAV DROPDOWN END-->
+
+        <!--TABLE START-->
+        <div class="table-car">
+            <div class="header d-flex justify-between align-items-center">
+                <div class="title">Дерево узлов</div>
+                <!-- /.title -->
+                <div class="name-model">Автозапчасти для ASTON MARTIN DB6 купе 4.0</div>
+                <!-- /.name-model -->
+            </div>
+            <!-- /.header -->
+            <div class="content node-car show">
+                <div class="tree-card-wrap d-flex">
+                    <div class="tree-wrap">
+
+                    </div>
+                    <!-- /.tree-wrap -->
+                    <div class="card-wrap">
+                        <div class="img-one-wrap">
+                            <img src="img/astonmartin-big.jpg" alt="">
+                        </div>
+                        <!-- /.img-one-wrap -->
+                    </div>
+                    <!-- /.img-wrap -->
+                </div>
+                <!-- /.tree-img-wrap -->
+            </div>
+            <!-- /.content show -->
+        </div>
+        <!--TABLE END-->
+
     </section>
     <!--FOOTER START-->
     <footer class="footer">
@@ -196,77 +299,7 @@
         </footer>
     <!--FOOTER END-->
 </section>
-<!--МОДАЛЬНОЕ ОКНО ACCOUNT-->
-<div class="account-wrap modal d-none">
-    <div class="header d-flex justify-between align-items-center">
-        <div class="title">
-            <span>Создать учетную запись</span>
-        </div>
-        <!-- /.modal-tires-title -->
-        <button class="close-icon-btn">
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-    <!-- /.modal-header -->
-    <div class="login-form-wrap d-flex justify-center">
-        <div class="login-form">
-            <div class="title">Юр. лицо</div>
-            <!-- /.title -->
-            <div class="input-wrap d-flex input-on-two justify-between">
-                <input type="text" placeholder="Имя" class="form-control">
-                <input type="text" placeholder="Фамилия" class="form-control">
-            </div>
-            <!-- /.input-wrap -->
-            <div class="input-wrap">
-                <input type="email" class="form-control" placeholder="E-mail">
-            </div>
-            <!-- /.input-wrap -->
-            <div class="input-wrap">
-                <input type="phone" class="form-control" placeholder="Телефон">
-            </div>
-            <!-- /.input-wrap -->
-            <div class="input-wrap">
-                <input type="text" class="form-control" placeholder="Код ОКПО">
-            </div>
-            <!-- /.input-wrap -->
-            <div class="input-wrap">
-                <div class="form-radio">
-                    <label><input type="radio" name="name-radio"><i></i></label>
-                    <label><input type="radio" name="name-radio"><i></i></label>
-                </div>
-                <!-- /.form-radio -->
-                <input type="text" class="form-control" placeholder="Свидетельство НДС">
-            </div>
-            <!-- /.input-wrap -->
-            <div class="title p-2">Юр. адрес</div>
-            <!-- /.title -->
-            <div class="input-wrap">
-                <input type="text" class="form-control" placeholder="Город">
-            </div>
-            <!-- /.input-wrap -->
-            <div class="input-wrap input-on-two d-flex justify-between">
-                <input type="text" class="form-control" placeholder="Улица">
-                <div class="input-on-two d-flex justify-between">
-                    <input type="text" class="form-control" placeholder="Дом">
-                    <input type="text" class="form-control" placeholder="Офис">
-                </div>
-                <!-- /.input-on-two -->
-            </div>
-            <!-- /.input-wrap -->
-            <div class="btns-wrap d-flex justify-between">
-                <button class="btn-form-account" type="submit">Создать</button>
-                <button class="btn-form-account" type="submit">Отменить</button>
-            </div>
-            <!-- /.btns-wrap -->
-        </div>
-        <!-- /.form-wrap -->
-    </div>
 
-</div>
-<!-- /.account-wrap modal -->
-
-<!--CUSTOM-LAYOUT-->
 <div class="custom-layout layout-js"></div>
 <script src="js/plugin.js"></script>
 </body>
