@@ -295,12 +295,41 @@ var Accordion = function () {
     function Accordion() {
         _classCallCheck(this, Accordion);
 
-        this.header = document.querySelector('.table-car .header');
-        this.content = document.querySelector('.table-car .content');
+        this.acc = document.getElementsByClassName("accordion");
         this.init();
     }
 
     _createClass(Accordion, [{
+        key: 'init',
+        value: function init() {
+            this.switching();
+        }
+    }, {
+        key: 'switching',
+        value: function switching() {
+            for (var i = 0; i < this.acc.length; i++) {
+                this.acc[i].onclick = function () {
+                    this.classList.toggle("is-open");
+                    this.nextElementSibling.classList.toggle("show");
+                };
+            }
+        }
+    }]);
+
+    return Accordion;
+}();
+
+var accord = new Accordion();
+
+var SwitchClass = function () {
+    function SwitchClass(nameClass) {
+        _classCallCheck(this, SwitchClass);
+
+        this.anyClasses = document.querySelectorAll(nameClass);
+        this.init();
+    }
+
+    _createClass(SwitchClass, [{
         key: 'init',
         value: function init() {
             this.events();
@@ -310,14 +339,23 @@ var Accordion = function () {
         value: function events() {
             var _this9 = this;
 
-            this.header.addEventListener('click', function (e) {
-                _this9.header.classList.toggle('is-closed');
-                _this9.content.classList.toggle('show');
+            this.anyClasses.forEach(function (anyClass) {
+                return anyClass.addEventListener('click', function () {
+                    return _this9.switching(anyClass);
+                });
             });
+        }
+    }, {
+        key: 'switching',
+        value: function switching(anyClass) {
+            this.anyClasses.forEach(function (anyClass) {
+                anyClass.classList.remove("is-active");
+            });
+            anyClass.classList.toggle("is-active");
         }
     }]);
 
-    return Accordion;
+    return SwitchClass;
 }();
 
-var accord = new Accordion();
+var anyClass = new SwitchClass('.no-items');
