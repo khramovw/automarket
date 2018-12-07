@@ -291,6 +291,8 @@ var Dropdown = function () {
 
 var dropdown = new Dropdown();
 
+// Аккордион
+
 var Accordion = function () {
     function Accordion() {
         _classCallCheck(this, Accordion);
@@ -359,3 +361,43 @@ var SwitchClass = function () {
 }();
 
 var anyClass = new SwitchClass('.no-items');
+
+// Счетчик
+
+var Counter = function () {
+    function Counter(nameClass) {
+        _classCallCheck(this, Counter);
+
+        this.nameClass = nameClass;
+        this.btn = document.querySelectorAll(nameClass + ' ' + 'button');
+        this.bntGroup = [].slice.call(this.btn);
+        this.start();
+    }
+
+    _createClass(Counter, [{
+        key: 'start',
+        value: function start() {
+            var _this10 = this;
+
+            this.bntGroup.forEach(function (el) {
+                return el.addEventListener('click', function (el) {
+                    return _this10.foo(el);
+                });
+            });
+        }
+    }, {
+        key: 'foo',
+        value: function foo(el) {
+            var count = Number(el.target.closest(this.nameClass).querySelector('.count-number').value);
+            el.target.matches('.count-minus') ? count-- : count++;
+
+            if (count < 0) count = 0;
+
+            el.target.closest(this.nameClass).querySelector('.count-number').value = count;
+        }
+    }]);
+
+    return Counter;
+}();
+
+var counter = new Counter('.count-wrap');
