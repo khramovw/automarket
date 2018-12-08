@@ -2363,30 +2363,22 @@ img {
   -webkit-background-size: cover;
           background-size: cover;
   background-attachment: fixed; }
-
-.home.tires {
-  background-image: url("../img/bg-3.jpg"); }
-
-.home.agricultural {
-  background-image: url("../img/bg-4.jpg"); }
-
-.home.belts {
-  background-image: url("../img/bg-5.jpg"); }
-
-.home.bearings {
-  background-image: url("../img/bg-6.jpg"); }
-
-.home.oils {
-  background-image: url("../img/bg-7.jpg"); }
-
-.home.cars {
-  background-image: url("../img/bg-8.jpg"); }
-
-.home.freight {
-  background-image: url("../img/bg-9.jpg"); }
-
-.home.batary {
-  background: url("../img/bg-1.jpg") no-repeat center/cover fixed; }
+  .home.tires {
+    background-image: url("../img/bg-3.jpg"); }
+  .home.agricultural {
+    background-image: url("../img/bg-4.jpg"); }
+  .home.belts {
+    background-image: url("../img/bg-5.jpg"); }
+  .home.bearings {
+    background-image: url("../img/bg-6.jpg"); }
+  .home.oils {
+    background-image: url("../img/bg-7.jpg"); }
+  .home.car {
+    background-image: url("../img/bg-8.jpg"); }
+  .home.freight {
+    background-image: url("../img/bg-9.jpg"); }
+  .home.batary {
+    background-image: url("../img/bg-1.jpg"); }
 
 .container {
   max-width: 75em;
