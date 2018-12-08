@@ -2356,29 +2356,32 @@ img {
 
 /* default classes*/
 /* defolt classes */
+.home {
+  background: url("../img/bg-2.jpg") no-repeat center/cover fixed; }
+
 .home.tires {
-  background: url("../img/bg-3.jpg") no-repeat center/cover; }
+  background: url("../img/bg-3.jpg") no-repeat center/cover fixed; }
 
 .home.agricultural {
-  background: url("../img/bg-4.jpg") no-repeat center/cover; }
+  background: url("../img/bg-4.jpg") no-repeat center/cover fixed; }
 
 .home.belts {
-  background: url("../img/bg-5.jpg") no-repeat center/cover; }
+  background: url("../img/bg-5.jpg") no-repeat center/cover fixed; }
 
 .home.bearings {
-  background: url("../img/bg-6.jpg") no-repeat center/cover; }
+  background: url("../img/bg-6.jpg") no-repeat center/cover fixed; }
 
 .home.oils {
-  background: url("../img/bg-7.jpg") no-repeat center/cover; }
+  background: url("../img/bg-7.jpg") no-repeat center/cover fixed; }
 
 .home.cars {
-  background: url("../img/bg-8.jpg") no-repeat center/cover; }
+  background: url("../img/bg-8.jpg") no-repeat center/cover fixed; }
 
 .home.freight {
-  background: url("../img/bg-9.jpg") no-repeat center/cover; }
+  background: url("../img/bg-9.jpg") no-repeat center/cover fixed; }
 
 .home.batary {
-  background: url("../img/bg-1.jpg") no-repeat center/cover; }
+  background: url("../img/bg-1.jpg") no-repeat center/cover fixed; }
 
 .container {
   max-width: 75em;
@@ -2467,7 +2470,7 @@ img {
   background-color: #ff423d;
   color: #fff;
   top: 50%;
-  left: 0;
+  left: 7px;
   -webkit-transform: translateY(-50%) translateX(-50%);
       -ms-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%); }
@@ -2780,8 +2783,7 @@ img {
 /* Home start */
 .home {
   min-height: 100vh;
-  background: url("../img/bg-2.jpg") no-repeat center/cover;
-  background-attachment: fixed; }
+  overflow: hidden; }
   @media screen and (max-width: 1024px) {
     .home {
       font-size: initial; } }
@@ -2823,8 +2825,8 @@ img {
     background-color: #a61814;
     opacity: 1; }
     .home .header-bottom-wrap .header-bottom {
-      padding-top: 2.375em;
-      padding-bottom: 2.375em; }
+      padding-top: 1.875em;
+      padding-bottom: 1.875em; }
       .home .header-bottom-wrap .header-bottom .logo img {
         width: 7em; }
     .home .header-bottom-wrap .header-nav {
@@ -2832,38 +2834,52 @@ img {
       font-size: 1em;
       letter-spacing: .1em; }
       .home .header-bottom-wrap .header-nav li {
-        position: relative; }
-        .home .header-bottom-wrap .header-nav li:after {
-          content: '';
-          position: absolute;
-          z-index: 1;
-          left: 0;
-          right: 0;
-          background-color: transparent;
-          height: 2px;
-          bottom: -12px; }
-        .home .header-bottom-wrap .header-nav li.is-active:after {
-          background-color: #fff; }
-        .home .header-bottom-wrap .header-nav li:hover:after {
-          background-color: #fff; }
+        height: 2em; }
+        .home .header-bottom-wrap .header-nav li a {
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          height: inherit; }
+        .home .header-bottom-wrap .header-nav li.is-active {
+          border-bottom: 2px solid #fff;
+          font-weight: 500; }
+        .home .header-bottom-wrap .header-nav li:hover {
+          border-bottom: 2px solid #fff;
+          font-weight: 500; }
       .home .header-bottom-wrap .header-nav li + li {
         margin-left: 2em; }
-    .home .header-bottom-wrap .basket i {
-      color: #fff;
-      font-size: 2em; }
-    .home .header-bottom-wrap .basket:after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      right: 0;
-      background-color: transparent;
-      height: 2px;
-      bottom: -8px; }
-    .home .header-bottom-wrap .basket.is-active:after {
-      background-color: #fff; }
-    .home .header-bottom-wrap .basket:hover:after {
-      background-color: #fff; }
+    .home .header-bottom-wrap .basket {
+      height: 3em;
+      width: 3em; }
+      .home .header-bottom-wrap .basket.is-active a {
+        border-bottom: 2px solid #fff; }
+      .home .header-bottom-wrap .basket a {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: inherit;
+        width: inherit;
+        -webkit-box-sizing: content-box;
+                box-sizing: content-box; }
+        .home .header-bottom-wrap .basket a:hover {
+          border-bottom: 2px solid #fff; }
+      .home .header-bottom-wrap .basket i {
+        color: #fff;
+        font-size: 2em; }
   .home .main-title {
     color: #fff;
     letter-spacing: .05em;
