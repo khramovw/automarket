@@ -2357,12 +2357,13 @@ img {
 /* default classes*/
 /* defolt classes */
 .home {
-  background-image: url("../img/bg-2.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   -webkit-background-size: cover;
           background-size: cover;
   background-attachment: fixed; }
+  .home {
+    background-image: url("../img/bg-2.jpg"); }
   .home.tires {
     background-image: url("../img/bg-3.jpg"); }
   .home.agricultural {
