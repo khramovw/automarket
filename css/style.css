@@ -2357,28 +2357,33 @@ img {
 /* default classes*/
 /* defolt classes */
 .home {
-  background: url("../img/bg-2.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-2.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-attachment: fixed; }
 
 .home.tires {
-  background: url("../img/bg-3.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-3.jpg"); }
 
 .home.agricultural {
-  background: url("../img/bg-4.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-4.jpg"); }
 
 .home.belts {
-  background: url("../img/bg-5.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-5.jpg"); }
 
 .home.bearings {
-  background: url("../img/bg-6.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-6.jpg"); }
 
 .home.oils {
-  background: url("../img/bg-7.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-7.jpg"); }
 
 .home.cars {
-  background: url("../img/bg-8.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-8.jpg"); }
 
 .home.freight {
-  background: url("../img/bg-9.jpg") no-repeat center/cover fixed; }
+  background-image: url("../img/bg-9.jpg"); }
 
 .home.batary {
   background: url("../img/bg-1.jpg") no-repeat center/cover fixed; }
